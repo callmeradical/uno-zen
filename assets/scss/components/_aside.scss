@@ -1,6 +1,6 @@
 .cover {
   position: fixed;
-  z-index: 1;
+  z-index: 0;
 
   display: block;
   width: $aside-width-collapsed;
@@ -8,7 +8,6 @@
   overflow-y: auto;
 
   border-right: 1px solid $gray;
-  box-shadow: 10.5px -10px 1px -9px $gray-light;
 
   &.animated {
     transition: width $aside-animation-time $aside-animation;
@@ -22,15 +21,12 @@
     }
   }
   &.container {
-    font-weight: $font-weight-thin;
-
     text-align: center;
-
     color: $gray-lightest;
 
-    @include font-shadow;
-    @include center-absolute;
-    @include background-filter;
+    @extend %font-shadow;
+    @extend %center-absolute;
+    @extend %background-filter;
   }
 }
 
@@ -90,7 +86,7 @@
 
           border-radius: 20px;
 
-          @include btn-cover-with-border;
+          @extend %btn-cover-with-border;
 
           > a {
             padding: .625rem 1.25rem;
@@ -105,7 +101,7 @@
           opacity: .8;
           color: $gray-lightest;
 
-          @include btn-cover;
+          @extend %btn-cover;
 
           &:hover {
             color: $hover-color;
@@ -127,7 +123,7 @@
         a {
           padding: 6px 8px 6px 9px;
 
-          @include btn-cover;
+          @extend %btn-cover;
           .label {
             display: none;
           }

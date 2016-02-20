@@ -2,30 +2,29 @@
 // PRE
 // ------------------------------
 
-@import 'modules/variables.scss';
-@import 'modules/utils.scss';
+@import 'modules/variables';
+@import 'modules/utils';
 
 // ------------------------------
 // MODULES
 // ------------------------------
 
-@import 'modules/reset.scss';
-@import 'modules/grid.scss';
-@import 'modules/global.scss';
-@import 'modules/fonts.scss';
-@import 'modules/buttons.scss';
-@import 'modules/forms.scss';
-@import 'modules/effects.scss';
-@import 'modules/prism.scss';
+@import 'modules/reset';
+@import 'modules/grid';
+@import 'modules/global';
+@import 'modules/fonts';
+@import 'modules/buttons';
+@import 'modules/effects';
+@import 'modules/prism';
 
 // ------------------------------
 // COMPONENTS
 // ------------------------------
 //
-@import 'components/aside.scss';
-@import 'components/page-error.scss';
-@import 'components/pagination.scss';
-@import 'components/post.scss';
-@import 'components/search.scss';
-@import 'components/loading.scss';
-@import 'components/media-queries.scss';
+@import 'components/aside';
+@import 'components/page-error';
+@import 'components/pagination';
+@import 'components/post';
+@import 'components/search';
+@import 'components/loading';
+@import 'components/media-queries';

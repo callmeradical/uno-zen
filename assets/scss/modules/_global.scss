@@ -240,3 +240,16 @@ main {
   vertical-align: -.1em !important;
   width: 1em !important;
 }
+
+.dimmer-mark {
+  background-color: rgba(25,25,25, .75);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  &:hover {
+    background-color: rgba(25,25,25, .25);
+  }
+}
