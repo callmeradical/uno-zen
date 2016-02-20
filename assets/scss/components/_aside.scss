@@ -86,7 +86,7 @@
 
           border-radius: 20px;
 
-          @extend %btn-cover-with-border;
+          @include btn-cover-with-border;
 
           > a {
             padding: .625rem 1.25rem;
