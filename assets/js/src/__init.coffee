@@ -30,6 +30,37 @@ window.Uno = Uno =
       $(this).mouseover -> $(this).html postDate
       $(this).mouseout -> $(this).html postDateInDays
 
+  ###*
+   * Apply Infinite scroll to a Ghost view.
+   * @param  {Object}  opts
+   * @param  {Integer} opts.page             Current page count.
+   * @param  {Integer} opts.maxPage          Max page count.
+   * @param  {Integer} opts.heigthSelector   Selector used to calculate height offset.
+   * @param  {Array}   opts.childrenSelector Selector for the AJAX action.
+   *
+   * @return {[type]}      [description]
+  ###
+  infiniteScroll: (opts) ->
+    threshold = 0.25
+    url = window.location.origin + opts.page
+    isFetching = false
+    existsPagesToFetch = -> opts.currentPage < opts.maxPage
+    nextPage = -> "#{url}/#{++opts.currentPage}"
+
+    $(window).scroll ->
+      scrollPosition = $(window).scrollTop()
+      height = $(opts.heigthSelector)[0].offsetHeight
+      height = height - (height * threshold)
+      isNearToBottom = scrollPosition > height
+
+      if existsPagesToFetch() and isNearToBottom and !isFetching
+        isFetching = true
+        $.get nextPage(), (data) ->
+          data = $(data)
+          data = data.children(selector) for selector in opts.childrenSelector
+          $(opts.heigthSelector).append data
+          isFetching = false
+
   device: ->
     w = window.innerWidth
     h = window.innerHeight
@@ -45,4 +76,3 @@ $('#profile-title').text window.profile_title if window.profile_title
 $('#profile-resume').text window.profile_resume if window.profile_resume
 $('#posts-headline').text window.posts_headline if window.posts_headline
 window.open_button = window.open_button or '.nav-posts > a'
-
