@@ -75,4 +75,6 @@ Uno.app.dataset.device = Uno.device()
 $('#profile-title').text window.profile_title if window.profile_title
 $('#profile-resume').text window.profile_resume if window.profile_resume
 $('#posts-headline').text window.posts_headline if window.posts_headline
-window.open_button = window.open_button or '.nav-posts > a'
+
+window.open_button ?= '.nav-posts > a'
+window.infinite_scroll ?= true
