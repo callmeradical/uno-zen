@@ -22,7 +22,6 @@
     "zen"
   ],
   "dependencies": {
-    "animate.css": "*",
     "fastclick": "*",
     "fitvids": "*",
     "pace": "*",
