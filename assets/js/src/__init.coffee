@@ -14,6 +14,7 @@ window.Uno = Uno =
   search:
     container: -> $('#results')
     form: (action) -> $('#search-container')[action]()
+    url: $('#search-form').attr('action')
 
   loadingBar: (action) -> $('.pace')[action]()
 
@@ -78,6 +79,7 @@ Uno.app.dataset.device = Uno.device()
 ## defaults
 window.open_button ?= '.nav-posts > a'
 window.infinite_scroll ?= true
+window.posts_headline ?= true
 
 $('#profile-title').text window.profile_title if window.profile_title
 $('#profile-resume').text window.profile_resume if window.profile_resume
@@ -85,6 +87,6 @@ $('#profile-resume').text window.profile_resume if window.profile_resume
 unless window.posts_headline
   $('#posts-headline').hide()
 else
-  $('#posts-headline').text window.posts_headline if window.posts_headline
+  $('#posts-headline').text window.posts_headline if typeof window.posts_headline is 'string'
 
 $('.pagination').hide() unless window.infinite_scroll

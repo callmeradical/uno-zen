@@ -1,6 +1,6 @@
 <section class="icon icon-search" id="search-container">
   <hr class="divider short" />
-  <form id="search-form">
-    <input type="text" name="search" placeholder="What are you looking for?" id="search-field" />
+  <form target="blank" id="search-form" action="https://www.google.com/#q=site:{{@blog.url}}">
+    <input id="search-input" maxlength="255" type="text" name="search" placeholder="What are you looking for?" />
   </form>
 </section>
