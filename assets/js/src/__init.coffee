@@ -41,6 +41,8 @@ window.Uno = Uno =
    * @return {[type]}      [description]
   ###
   infiniteScroll: (opts) ->
+    return unless window.infinite_scroll
+
     threshold = 0.25
     url = window.location.origin + opts.page
     isFetching = false
@@ -72,9 +74,17 @@ Uno.app.dataset.page = Uno.context()
 Uno.app.dataset.device = Uno.device()
 
 # window global properties
-$('#profile-title').text window.profile_title if window.profile_title
-$('#profile-resume').text window.profile_resume if window.profile_resume
-$('#posts-headline').text window.posts_headline if window.posts_headline
 
+## defaults
 window.open_button ?= '.nav-posts > a'
 window.infinite_scroll ?= true
+
+$('#profile-title').text window.profile_title if window.profile_title
+$('#profile-resume').text window.profile_resume if window.profile_resume
+
+unless window.posts_headline
+  $('#posts-headline').hide()
+else
+  $('#posts-headline').text window.posts_headline if window.posts_headline
+
+$('.pagination').hide() unless window.infinite_scroll
