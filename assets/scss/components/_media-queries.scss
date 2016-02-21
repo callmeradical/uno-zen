@@ -66,8 +66,6 @@
     &.expanded {
       width: 16rem;
       transform: translate3d(0, 0, 0);
-      border-right: 1px solid $gray;
-      box-shadow: 11px -10px 1px -9px $gray-light;
     }
 
     &.animated {
