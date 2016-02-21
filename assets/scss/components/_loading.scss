@@ -1,12 +1,8 @@
 // more in http://github.hubspot.com/pace/docs/welcome/
 
 .pace {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-          pointer-events: none;
-
-  -webkit-pointer-events: none;
+  user-select: none;
+  pointer-events: none;
 
   &.pace-progress {
     position: fixed;
