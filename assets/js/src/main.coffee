@@ -10,7 +10,7 @@ $ ->
   else
     FastClick.attach Uno.app
 
-  if Uno.is 'page', 'home'
+  if Uno.is('page', 'home') or Uno.is('page', 'paged')
     Uno.timeAgo '#posts-list time'
 
     $('.post-title').on 'mouseenter mouseleave', (e) ->
