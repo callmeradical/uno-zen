@@ -4,9 +4,10 @@
 
 #posts-list {
   list-style-type: none;
+  text-align: center;
 
   > .post-item {
-    text-align: center;
+
     margin: 0;
     line-height: $line-height;
 
