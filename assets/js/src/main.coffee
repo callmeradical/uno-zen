@@ -13,6 +13,15 @@ $ ->
   if Uno.is 'page', 'home'
     Uno.timeAgo '#posts-list time'
 
+    $('.post-title').on 'mouseenter mouseleave', (e) ->
+      $(this).prev().toggleClass('dimmer-mark-hover')
+
+    $('.post-time').on 'mouseenter mouseleave', (e) ->
+      $(this).prev().prev().toggleClass('dimmer-mark-hover')
+
+    $('.post-tags').on 'mouseenter mouseleave', (e) ->
+      $(this).prev().children().first().toggleClass('dimmer-mark-hover')
+
   if Uno.is 'page', 'post'
     Uno.timeAgo '.post.meta > time'
     $('main').readingTime readingTimeTarget: '.post.reading-time > span'
