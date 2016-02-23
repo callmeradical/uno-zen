@@ -22,7 +22,7 @@
     {{ghost_foot}}
     <script src="{{asset "js/uno-zen.js"}}" type="text/javascript" charset="utf-8"></script>
     <script>
-      if (Uno.is('page', 'home') || Uno.is('page', 'paged')) {
+      if (Uno.is('page', 'home') || Uno.is('page', 'paged') || Uno.is('page', 'tag')) {
         window.Uno.infiniteScroll({
           currentPage: parseInt('{{pagination.page}}'),
           maxPage: parseInt('{{pagination.pages}}'),
