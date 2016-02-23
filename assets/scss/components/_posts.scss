@@ -1,0 +1,48 @@
+#posts-headline {
+  text-align: center;
+}
+
+#posts-list {
+  list-style-type: none;
+  text-align: center;
+
+  > .post-item {
+
+    margin: 0;
+    line-height: $line-height;
+
+    > a {
+      display: block;
+      height: 13.75rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      > h1 {
+        width: 80%;
+        color: $white;
+        transform: translateY(-50%) translateX(-50%);
+        position: absolute;
+        top: 24%;
+        left: 50%;
+        font-weight: bold;
+        @extend %font-shadow;
+      }
+
+      > time {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        color: $gray;
+        margin-top: 2rem;
+        @extend %font-shadow;
+      }
+    }
+
+    > .post-tags {
+      position: absolute;
+      margin-top: -90px;
+      width: 100%;
+    }
+  }
+}

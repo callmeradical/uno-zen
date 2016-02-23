@@ -1,20 +1,17 @@
-.pagination {
+#pagination {
   text-align: center;
   margin: 2rem;
 }
 
-.posts {
+#posts-index {
+  font-size: .8rem;
+  color: $gray-dark;
+}
 
-  &.index {
-    font-size: .8rem;
-    color: $gray-dark;
-  }
+#posts-newer {
+  margin-right: 1rem;
+}
 
-  &.newer {
-    margin-right: 1rem;
-  }
-
-  &.older {
-    margin-left: 1rem;
-  }
+#posts-older {
+  margin-left: 1rem;
 }

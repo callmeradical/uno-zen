@@ -1,156 +1,84 @@
-#posts-headline {
-  text-align: center;
+
+/** Shared between posts and post */
+
+.post-tags > a {
+  padding: .15rem .25rem;
+  font-size: .55rem;
+  transition: all $aside-animation-time;
+  text-transform: uppercase;
+  color: $gray-lightest;
+  border-radius: .25rem;
+  background-color: rgba($primary-color, .45);
+  &:hover {
+    background-color: rgba($primary-color, 1);
+  }
 }
 
-#posts-list {
-  list-style-type: none;
+.post-title {
+  font-size: $font-title;
+  margin: 3rem 0 2.5rem;
+  transition: all $aside-animation-time;
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+/*  */
+
+#post-author {
+  img {
+    display: inline-block;
+    height: 22px;
+    margin: 0 .5rem;
+    vertical-align: middle;
+    border: 0;
+    box-shadow: none;
+  }
+}
+
+#post-image {
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
+#post-header {
   text-align: center;
+  margin: .7em 0;
+  font-size: .85rem;
+  color: $gray;
+}
 
-  > .post-item {
+#post-content {
 
-    margin: 0;
-    line-height: $line-height;
+  a {
+    @extend %dotted-link;
+  }
 
-    > a {
+  > p {
+    > img {
+      border-radius: $border-radius;
       display: block;
-      height: 13.75rem;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-
-      > h1 {
-        width: 80%;
-        color: $white;
-        transform: translateY(-50%) translateX(-50%);
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        font-weight: bold;
-        @extend %font-shadow;
-      }
-
-      > time {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        color: $gray;
-        margin-top: 2rem;
-        @extend %font-shadow;
-      }
-    }
-
-    > .post-tags {
-      position: absolute;
-      margin-top: -90px;
-      width: 100%;
-
-      > a {
-        padding: .15rem .25rem;
-        font-size: .55rem;
-        transition: all $aside-animation-time;
-        text-transform: uppercase;
-        color: $gray-lightest;
-        border-radius: .25rem;
-        background-color: rgba($primary-color, .45);
-        &:hover {
-          background-color: rgba($primary-color, 1);
-        }
-      }
+      margin: 1.5rem auto;
+      max-width: 100%;
+      text-align: center;
+      width: auto;
     }
   }
 
-  // > li {
-  //   margin-left: 1rem;
-  //   margin-bottom: 1.25rem;
-
-  //   > time {
-  //     float: right;
-  //     text-transform: uppercase;
-  //     color: #777;
-  //     font-size: 10px;
-  //     letter-spacing: 2px;
-  //   }
-
-  //   > a {
-  //     @extend %dotted-link;
-  //   }
-
-  //   > span > a {
-  //     bottom: 2px;
-  //   }
-  // }
+  > pre {
+    width: 95%;
+  }
 }
 
-// #post-content a {
-//   @extend %dotted-link;
-// }
+#post-comments {
+  padding: 2rem 0 0;
+}
 
-// .post {
-//   > p {
-//     > img {
-//       border-radius: $border-radius;
-//       display: block;
-//       margin: 1.5rem auto;
-//       max-width: 100%;
-//       text-align: center;
-//       width: auto;
-//     }
-//   }
 
-//   pre {
-//     width: 95%;
-//   }
-
-//   > header {
-//     text-align: center;
-//   }
-
-//   &.description {
-//     margin-bottom: 1rem;
-//     font-size: .9em;
-//     color: $gray-dark;
-//   }
-
-//   &.meta {
-//     margin: .7em 0;
-//     font-size: .85rem;
-//     color: $gray;
-//   }
-
-//   &.author {
-//     img {
-//       display: inline-block;
-//       height: 22px;
-//       margin: 0 .5rem;
-//       vertical-align: middle;
-//       border: 0;
-//       box-shadow: none;
-//     }
-//   }
-
-  // &.comments {
-  //   padding: 2rem 0 0;
-  // }
-
-  // &.related {
-  //   line-height: 1;
-  //   display: flex;
-  //   padding: 4rem 0 2rem;
-  //   justify-content: space-between;
-  // }
-// }
-
-// #post-image {
-//   max-width: 100%;
-//   margin-top: 1rem;
-// }
-
-// #post-title {
-//   font-size: $font-title;
-//   margin: 3rem 0 2.5rem;
-//   transition: all $aside-animation-time;
-
-//   &:hover {
-//     color: $hover-color;
-//   }
-// }
+#post-related {
+  line-height: 1;
+  display: flex;
+  padding: 4rem 0 2rem;
+  justify-content: space-between;
+}
