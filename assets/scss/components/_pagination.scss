@@ -15,3 +15,48 @@
 #posts-older {
   margin-left: 1rem;
 }
+
+#prev-btn,
+#next-btn {
+  border: none;
+  font-size: $font-h3;
+  font-weight: normal;
+  opacity: .5;
+  filter: alpha(opacity=70);
+  overflow: hidden;
+  padding: 50px;
+  position: fixed;
+  text-align: center;
+  text-overflow: ellipsis;
+  top: 45%;
+  width: 250px;
+  white-space: nowrap;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &::before {
+    content: "";
+    background: url("../img/up.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 24px;
+    left: 50%;
+    margin-left: -12px;
+    position: absolute;
+    top: 25px;
+    width: 24px;
+
+  }
+}
+
+#prev-btn {
+  left: 16%;
+  transform: rotate(-90deg);
+}
+
+#next-btn {
+  right: -4%;
+  transform: rotate(90deg);
+}
