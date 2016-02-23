@@ -44,7 +44,7 @@ window.Uno = Uno =
   infiniteScroll: (opts) ->
     return unless window.infinite_scroll
 
-    threshold = 0.25
+    threshold = 0.33
     url = window.location.origin + opts.page
     isFetching = false
     existsPagesToFetch = -> opts.currentPage < opts.maxPage
