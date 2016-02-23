@@ -22,13 +22,15 @@
     {{ghost_foot}}
     <script src="{{asset "js/uno-zen.js"}}" type="text/javascript" charset="utf-8"></script>
     <script>
-      window.Uno.infiniteScroll({
-        currentPage: parseInt('{{pagination.page}}'),
-        maxPage: parseInt('{{pagination.pages}}'),
-        page: '/page',
-        heigthSelector: '#posts-list',
-        childrenSelector: ['.content', '#posts-list', null],
-      })
+      if (Uno.is('page', 'home') || Uno.is('page', 'paged')) {
+        window.Uno.infiniteScroll({
+          currentPage: parseInt('{{pagination.page}}'),
+          maxPage: parseInt('{{pagination.pages}}'),
+          page: '/page',
+          heigthSelector: '#posts-list',
+          childrenSelector: ['.content', '#posts-list', null],
+        })
+      }
     </script>
     {{> google-analytics}}
   </body>
