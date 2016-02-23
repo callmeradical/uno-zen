@@ -8,7 +8,7 @@
         <time datetime="{{date format="YYYY-MM-DDTHH:MM"}}">{{date format="DD MMM YYYY"}}</time>
         <span class="post-tags">{{tags prefix="in " separator=" "}}</span>
         {{!> post-author}}
-        <span class="post reading-time"> ~ <span></span> read.</span>
+        <span class="post-reading-time"> ~ <span></span> read.</span>
       </div>
 
       <a alt="Tweet '{{title}}'" href="https://twitter.com/intent/tweet?text={{encode title}}{{encode ' »'}}&amp;hashtags={{tags separator="," autolink="false"}}&amp;url={{url absolute="true"}}">

@@ -23,8 +23,8 @@ $ ->
       $(this).prev().children().first().toggleClass('dimmer-mark-hover')
 
   if Uno.is 'page', 'post'
-    Uno.timeAgo '.post.meta > time'
-    $('main').readingTime readingTimeTarget: '.post.reading-time > span'
+    Uno.timeAgo '#post-meta > time'
+    $('.content').readingTime readingTimeTarget: '.post-reading-time > span'
     $('.content').fitVids()
 
   if Uno.is 'page', 'error'
