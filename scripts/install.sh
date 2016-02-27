@@ -6,7 +6,7 @@ if [ -d "uno-zen" ]; then
   exit
 fi
 
-git clone https://github.com/Kikobeats/uno-zen.git && cd uno-zen
+git clone https://github.com/callmeradical/uno-zen.git && cd uno-zen
 
 . "$PWD"/scripts/utils.sh
 
