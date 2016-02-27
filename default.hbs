@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>{{meta_title}}</title>
     {{> meta}}
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600%7CRoboto+Slab:300,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{{asset "css/uno-zen.css"}}" />
     {{ghost_head}}
   </head>
   <body class="{{body_class}}">
-    <header id="menu-button" class="expanded">
+    <section id="menu-button" class="expanded">
       <a><i class="icon icon-list"></i></a>
-    </header>
+    </section>
     {{> aside}}
     <main>
       <section id="search-results"></section>
@@ -20,7 +21,7 @@
       </section>
     </main>
     {{ghost_foot}}
-    <script src="{{asset "js/uno-zen.js"}}" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="{{asset "js/uno-zen.js"}}"></script>
     {{> google-analytics}}
   </body>
 </html>
